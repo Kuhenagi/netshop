@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/main.css">
+    <title>Githubネットショップ</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+</head>
+<body>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+        <script src="src/main.js"></script>
+        <div class="header">
+            <center><a href="index.html"><img src="src/logo.png" alt="KUHENAGI NETSHOP" width="400"></a></center>
+        </div>
+    <br><br>
+    <div class="text" style="height: 140px;">
+        <p><h1 id="i1" class="maintext nicomoji">新弾しか売ってないよん。ごめんね</h1></p>
+    </div>
+    <div class="text" style="height: 5000px;color: black;border-color: rgb(115, 115, 115);background-color: white;">
+        <item><img src="src/items/pack/DMEX-19 デュエル・マスターズTCG マスター・ファイナル・メモリアル・パック.png">
+            <h1 id="dmex19zaiko" style="color:red;position: relative; left: 230px;top: -400px;">
+                売り切れ<br>
+                <input type="number" name="dmex19count" id="dmex19count"><br></h1>
+                <a style="color:rgb(0, 0, 0);position: relative; left: 230px;top: -400px;width: 100px;height: -5px;font-size: small;" class="btn" href="">カートに入れる</a>
+                <h2 style="color:rgb(0, 0, 0);position: relative; left: 230px;top: -400px;">DMEX-19</h2>
+                <h3 style="color:rgb(0, 0, 0);position: relative; left: 230px;top: -400px;">税込み165円<br>(150円+税)</h3><br></item>
+    </div>
+<script>
+    var zaiko;
+    zaiko = fopen("list/pack", "r");
+    if(zaiko == null)
+    {
+        fclose("list/pack");
+        zaiko = {
+            dmex_19 : 99
+        };
+        fopen("list/pack","w");
+        fwrite("list/pack",zaiko);
+    }
+    zaiko.dmex_19 -= document.getElementById('dmex19count').value;
+    document.getElementById('dmex19zaiko').innerHTML = zaiko.dmex_19;
+</script>
+</body>
+</html>

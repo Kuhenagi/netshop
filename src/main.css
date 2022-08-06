@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+}
+div.header {
+    background-color: rgb(166, 246, 255);
+    height: 370px;
+}
+div.text {
+    border-color: black;
+    border: outset;
+    border-width: 20px;
+    background-color: rgb(79, 79, 79);
+    color: azure;
+}
+.maintext {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+.nicomoji {
+    font-family: "Nico Moji";
+  }
+a.table {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+div.content {
+    border: 20px dashed #606060;
+}
+.btn {
+    background-color: #1492AF;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    padding: 1.25rem 4rem;
+    text-decoration: none;
+    transition: .3s;
+    font-size: large;
+}
+.btn:hover {
+    box-shadow: 0px 12px 24px rgba(20, 146, 175, 0.38);
+    transform: translateY(-4px);
+}
