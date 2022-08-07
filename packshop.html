@@ -30,20 +30,5 @@
                 <h2 style="color:rgb(0, 0, 0);position: relative; left: 230px;top: -400px;">DMEX-19</h2>
                 <h3 style="color:rgb(0, 0, 0);position: relative; left: 230px;top: -400px;">税込み165円<br>(150円+税)</h3><br></item>
     </div>
-<script>
-    var zaiko;
-    zaiko = fopen("list/pack", "r");
-    if(zaiko == null)
-    {
-        fclose("list/pack");
-        zaiko = {
-            dmex_19 : 99
-        };
-        fopen("list/pack","w");
-        fwrite("list/pack",zaiko);
-    }
-    zaiko.dmex_19 -= document.getElementById('dmex19count').value;
-    document.getElementById('dmex19zaiko').innerHTML = zaiko.dmex_19;
-</script>
 </body>
 </html>
